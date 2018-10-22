@@ -1,0 +1,26 @@
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import './App.css';
+
+// header, landing, and footer
+import Navbar from "./components/layouts/Navbar";
+import Landing from "./components/layouts/Landing";
+import Footer from "./components/layouts/Footer";
+
+import Search from "./components/search/Search"
+
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <Router>
+          <Navbar/>
+        </Router>
+        <Landing/>
+        <Footer/>
+      </div>
+    );
+  }
+}
+
+export default App;
