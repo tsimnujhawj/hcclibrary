@@ -8,6 +8,7 @@ const sectionStyle = {
 };
 
 class Landing extends Component {
+
     render() {
         return (
         <div>

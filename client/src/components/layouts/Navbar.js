@@ -22,10 +22,10 @@ class Navbar extends Component {
         <Link className="nav-link" to="/search">Search</Link>
       </li>
       <li className="nav-item">
-        <Link className="nav-link" to="/">About</Link>
+        <Link className="nav-link" to="/about">About</Link>
       </li>
       <li className="nav-item">
-        <Link className="nav-link" to="/">Contact Us</Link>
+        <Link className="nav-link" to="/contact">Contact Us</Link>
       </li>
     </ul>
 
