@@ -10,18 +10,23 @@ import Footer from "./components/layouts/Footer";
 // import Search from "./components/search/Search"
 import Catalog from "./components/search/Catalog"
 
+import About from "./components/about/About"
+import Contact from "./components/contact/Contact"
+
 class App extends Component {
   render() {
     return (
       <div>
         <Router>
-          <Switch>
+          <div>
           <Navbar/>
             <Route exact path="/" component={Landing}/>
             <Route exact path="/search" component={Catalog} />
-          </Switch>
+            <Route exact path="/about" component={About} />
+            <Route exact path="/contact" component={Contact} />
+            </div>
         </Router>
-        <Landing/>
+        
         <Footer/>
       </div>
     );
