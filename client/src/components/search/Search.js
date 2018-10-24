@@ -1,9 +1,16 @@
-import React from "react";
+import React, { Component } from "react";
+import SearchLanding from "./SearchLanding";
 
-const Search = props => (
+class Search extends Component {
+
+render(){
+    return(
         <div>
-            <h1>SEARCHING SEARCHING SEARCHING SEARCHING SEARCHING</h1>
+            <SearchLanding/>
+            
         </div>
-)
+    )
+}
+}
 
 export default Search;
