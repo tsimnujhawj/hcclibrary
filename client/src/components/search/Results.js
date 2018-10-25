@@ -1,14 +1,14 @@
 import React from "react";
 
 const Results = props => (
-  <div className="container">
+  <div className="container result-container">
   <div className="list-group result-item">
-  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
-    <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">Article title</h5>
+  <a href="#" className="list-group-item list-group-item-action flex-column align-items-start active">
+    <div className="d-flex w-100 justify-content-between">
+      <h5 className="mb-1">Article title</h5>
       <small>3 days ago</small>
     </div>
-    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+    <p className="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
     <small>Donec id elit non mi porta.</small>
   </a>
     </div>

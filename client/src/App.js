@@ -16,8 +16,11 @@ import Contact from "./components/contact/Contact"
 class App extends Component {
   render() {
     return (
-      <div>
+      
+        <div>
+          <div className="footer-container">
         <Router>
+          
           <div>
           <Navbar/>
             <Route exact path="/" component={Landing}/>
@@ -26,7 +29,7 @@ class App extends Component {
             <Route exact path="/contact" component={Contact} />
             </div>
         </Router>
-        
+        </div>
         <Footer/>
       </div>
     );

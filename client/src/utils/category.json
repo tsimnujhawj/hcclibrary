@@ -11,4 +11,56 @@
         "id": "3",
         "category": "Education"
     },
+    {
+        "id": "4",
+        "category": "Hmong Pahawb Writing System"
+    },
+    {
+        "id": "5",
+        "category": "War in Laos"
+    },
+    {
+        "id": "6",
+        "category": "Clan and Politics"
+    },
+    {
+        "id": "7",
+        "category": "Drug Addiction and Dependency"
+    },
+    {
+        "id": "8",
+        "category": "Economic Adaptation"
+    },
+    {
+        "id": "9",
+        "category": "Elderly Hmong Health Issues"
+    },
+    {
+        "id": "10",
+        "category": "Hmong and Disabilities"
+    },
+    {
+        "id": "11",
+        "category": "Hmong Culture, Calues, and Identity"
+    },
+    {
+        "id": "12",
+        "category": "Hmong History"
+    },
+    {
+        "id": "13",
+        "category": "Hmong in China"
+    },
+    {
+        "id": "14",
+        "category": "Hmong in Laos and Thailand"
+    },
+    {
+        "id": "15",
+        "category": "Hmong in Vietnam"
+    },
+    {
+        "id": "16",
+        "category": "Hmong Music and Folk Arts"
+    },
 ]

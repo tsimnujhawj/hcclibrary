@@ -7,7 +7,7 @@ const sectionStyle = {
   backgroundImage: `url(${Background})`
 };
 
-const SearchLanding = () => {
+const SearchLanding = props => {
         return (
         <div>
             <div style={sectionStyle} className="landing-image">

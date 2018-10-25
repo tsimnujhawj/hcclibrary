@@ -10,11 +10,15 @@ const sectionStyle = {
 const Search = props => {
         return (
         <div>
-            <div style={sectionStyle} className="landing-image">
+            <div
+            // style={sectionStyle}
+            // className="landing-image"
+            >
                 <div className="hero-content">
                     <h1 id="hero-title">Hmong Cultural Center's Library Catalog - Search</h1>
                 </div>
-            <form>
+
+            <form className="form-container">
             <div className="container">
             <div className="row">
                 <div className="col-md-6">
