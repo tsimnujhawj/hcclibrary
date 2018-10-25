@@ -24,7 +24,7 @@ const Search = props => {
                 <div className="col-md-6">
                     <div className="form-group">
                     <label htmlFor="searchQuery">Search</label>
-                    <input type="text" className="form-control" placeholder="Enter your search words" onChange={props.handleSearchQuery}/>
+                    <input type="text" className="form-control" placeholder="Search keywords" onChange={props.handleSearchQuery}/>
                     </div>
                 </div>
                 <div className="col-md-6">

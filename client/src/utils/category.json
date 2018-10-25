@@ -1,31 +1,38 @@
 [
     {
         "id": "1",
-        "category": "Linguistic and Hmong Romanize Writing System"
+        "category": "Linguistic and Hmong Romanize Writing System",
+        "keyword": ["Linguistic", "Hmong", "Romanize", "Writing", "System"]
     },
     {
         "id": "2",
-        "category": "Health & Medicine"
+        "category": "Health & Medicine",
+        "keyword": ["Health", "And", "&", "Medicine"]
     },
     {
         "id": "3",
-        "category": "Education"
+        "category": "Education",
+        "keyword": ["Education", "School"]
     },
     {
         "id": "4",
-        "category": "Hmong Pahawb Writing System"
+        "category": "Hmong Pahawb Writing System",
+        "keyword": ["Linguistic", "Hmong", "Pahawb", "Writing", "System"]
     },
     {
         "id": "5",
-        "category": "War in Laos"
+        "category": "War in Laos",
+        "keyword": ["War", "Laos", "Secret", "Communism", "Vietnam War"]
     },
     {
         "id": "6",
-        "category": "Clan and Politics"
+        "category": "Clan and Politics",
+        "keyword": ["Clan", "Politics"]
     },
     {
         "id": "7",
-        "category": "Drug Addiction and Dependency"
+        "category": "Drug Addiction and Dependency",
+        "keyword": ["Addiction", "Drug", "Dependency", "and"]
     },
     {
         "id": "8",
@@ -63,4 +70,204 @@
         "id": "16",
         "category": "Hmong Music and Folk Arts"
     },
+    {
+        "id": "17",
+        "category": "Race Relation and the Law"
+    },
+    {
+        "id": "18",
+        "category": "Refugee Resettlement"
+    },
+    {
+        "id": "19",
+        "category": "Residental Patterns"
+    },
+    {
+        "id": "20",
+        "category": "Hmong LGBT"
+    },
+    {
+        "id": "21",
+        "category": "Hmong Entertainment"
+    },
+    {
+        "id": "22",
+        "category": "Children's Collection"
+    },
+    {
+        "id": "23",
+        "category": "Hmong Magazines"
+    },
+    {
+        "id": "24",
+        "category": "Social Issues and the Hmong Youth"
+    },
+    {
+        "id": "25",
+        "category": "Hmong and Postsecondary Education"
+    },
+    {
+        "id": "26",
+        "category": "Hmong in the Schools"
+    },
+    {
+        "id": "27",
+        "category": "Hmong Values and Political Leadership"
+    },
+    {
+        "id": "28",
+        "category": "Hmong Cultural Information"
+    },
+    {
+        "id": "29",
+        "category": "Hmong Religion"
+    },
+    {
+        "id": "30",
+        "category": "Hmong Women's Issues"
+    },
+    {
+        "id": "31",
+        "category": "Race Relations and the Hmong"
+    },
+    {
+        "id": "32",
+        "category": "Hmong"
+    },
+    {
+        "id": "33",
+        "category": "Hmong Refugee Studies"
+    },
+    {
+        "id": "34",
+        "category": "Hmong American Adaptation"
+    },
+    {
+        "id": "35",
+        "category": "Hmong Memoir and Oral History"
+    },
+    {
+        "id": "36",
+        "category": "Hmong Dictionaries and Grammar"
+    },
+    {
+        "id": "37",
+        "category": "Hmong Studies Journal"
+    },
+    {
+        "id": "38",
+        "category": "Hmong Parenting"
+    },
+    {
+        "id": "39",
+        "category": "Hmong Family Life and Marriage"
+    },
+    {
+        "id": "40",
+        "category": "Hmong Folktales"
+    },
+    {
+        "id": "41",
+        "category": "Hmong Story Cloths and Textiles"
+    },
+    {
+        "id": "42",
+        "category": "Hmong Music and Dance"
+    },
+    {
+        "id": "43",
+        "category": "Creative Hmong Writing"
+    },
+    {
+        "id": "44",
+        "category": "Fiction About Hmong"
+    },
+    {
+        "id": "45",
+        "category": "Hmong Bibliographies"
+    },
+    {
+        "id": "46",
+        "category": "Asian American Studies"
+    },
+    {
+        "id": "47",
+        "category": "Studies of Hmong Communities in Minnesota"
+    },
+    {
+        "id": "48",
+        "category": "Studies of Hmong in Wisconsin and Michigan"
+    },
+    {
+        "id": "49",
+        "category": "Studies of Hmong in California"
+    },
+    {
+        "id": "50",
+        "category": "Karen Studies"
+    },
+    {
+        "id": "51",
+        "category": "Video"
+    },
+    {
+        "id": "52",
+        "category": "Historical"
+    },
+    {
+        "id": "53",
+        "category": "War and Immigration"
+    },
+    {
+        "id": "54",
+        "category": "Language"
+    },
+    {
+        "id": "55",
+        "category": "Educational"
+    },
+    {
+        "id": "56",
+        "category": "Audio"
+    },
+    {
+        "id": "57",
+        "category": "Entertainment Videos"
+    },
+    {
+        "id": "58",
+        "category": "Lao History and Culture"
+    },
+    {
+        "id": "59",
+        "category": "Lao Language Material"
+    },
+    {
+        "id": "60",
+        "category": "Citizenship Books"
+    },
+    {
+        "id": "61",
+        "category": "Hmong Language"
+    },
+    {
+        "id": "62",
+        "category": "Children's Books"
+    },
+    {
+        "id": "63",
+        "category": "Hmong Christian Literature and Bible"
+    },
+    {
+        "id": "64",
+        "category": "Census Publications about the Hmong"
+    },
+    {
+        "id": "65",
+        "category": "Magazines"
+    },
+    {
+        "id": "66",
+        "category": "VHS"
+    }
 ]
