@@ -54,3 +54,7 @@
   color: white;
   text-align: center;
 }
+
+.result-item {
+  margin: 20px;
+}

@@ -20,13 +20,13 @@ const SearchLanding = () => {
                 <div className="col-md-6">
                     <div className="form-group">
                     <label htmlFor="searchQuery">Search</label>
-                    <input type="text" className="form-control" placeholder="Enter your search query"/>
+                    <input type="text" className="form-control" placeholder="Enter your search query" onChange={props.handleSearchQuery}/>
                     </div>
                 </div>
                 <div className="col-md-6">
                 <div class="form-group">
                     <label htmlFor="queryTopic">Topic</label>
-                    <select class="form-control" id="queryTopic">
+                    <select class="form-control" id="queryTopic" onChange={props.handleTopicQuery}>
                     <option value="1">Linguistic and Hmong Romanize Writing System</option>
                     <option value="2">Health &amp; Medicine</option>
                     <option value="3">Education</option>
@@ -34,7 +34,7 @@ const SearchLanding = () => {
                 </div>
                 </div>
             </div>
-            <button type="submit" className="btn btn-info">Submit</button>
+            <button type="submit" className="btn btn-info" onClick={props.handleFormSubmit}>Submit</button>
             </div>
             </form>
 
