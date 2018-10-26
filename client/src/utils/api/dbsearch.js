@@ -1,9 +1,9 @@
 import React from "react";
-import DB from "../db/hcc_database.csv";
+// import DB from "../db/hcc_database.csv";
 
 const SearchDatabase = {
     searchData: () => {
-        console.log(DB[3])
+        console.log("HEY DATABASE")
     }
 }
 
