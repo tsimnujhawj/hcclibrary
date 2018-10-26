@@ -17,6 +17,12 @@ app.use(function(req, res, next) {
   next();
 });
 
+// routes requirement
+const dbsearch = require("./routes/api/db_search");
+
+// activate routes
+app.use("/findall", dbsearch);
+
 // Server static assets if in production
 if (process.env.NODE_ENV === "production") {
   // Set static folder

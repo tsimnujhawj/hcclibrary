@@ -1,19 +1,22 @@
 import React, { Component } from "react";
-import Background from '../../../src/images/DSCF7620_Vlai_Ly.jpg';
+import Category from "../../utils/api/category"
+import CategorySelect from "./CategorySelect"
 
-const sectionStyle = {
-  width: "100%",
-  height: "100vh",
-  backgroundImage: `url(${Background})`
-};
+class Search extends Component {
 
-const Search = props => {
+    renderCategory = () => {
+        return Category.map(el => (
+          <CategorySelect
+            id={el.id}
+            category={el.category}
+          />
+        ));
+      }
+
+        render() {
         return (
         <div>
-            <div
-            // style={sectionStyle}
-            // className="landing-image"
-            >
+            <div>
                 <div className="hero-content">
                     <h1 id="hero-title">Hmong Cultural Center's Library Catalog - Search</h1>
                 </div>
@@ -24,28 +27,26 @@ const Search = props => {
                 <div className="col-md-6">
                     <div className="form-group">
                     <label htmlFor="searchQuery">Search</label>
-                    <input type="text" className="form-control" placeholder="Search keywords" onChange={props.handleSearchQuery}/>
+                    <input type="text" className="form-control" placeholder="Search keywords" onChange={this.props.handleSearchQuery}/>
                     </div>
                 </div>
                 <div className="col-md-6">
                 <div className="form-group">
                     <label htmlFor="queryTopic">Topic</label>
-                    <select className="form-control" id="queryTopic" onChange={props.handleTopicQuery}>
+                    <select className="form-control" id="queryTopic" onChange={this.props.handleTopicQuery}>
                     <option value="">Select A Topic</option>
-                    <option value="1">Linguistic and Hmong Romanize Writing System</option>
-                    <option value="2">Health &amp; Medicine</option>
-                    <option value="3">Education</option>
+                    {this.renderCategory()}
                     </select>
                 </div>
                 </div>
             </div>
-            <button type="submit" className="btn btn-info" onClick={props.handleFormSubmit}>Submit</button>
+            <button type="submit" className="btn btn-info" onClick={this.props.handleFormSubmit}>Submit</button>
             </div>
             </form>
 
             </div>
         </div>
-        )
+        )}
 }
 
 export default Search;

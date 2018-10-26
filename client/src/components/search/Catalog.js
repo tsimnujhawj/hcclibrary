@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 
+import SearchDatabase from "../../utils/api/dbsearch"
 import Search from "./Search"
 import Results from "./Results"
 
@@ -9,7 +10,8 @@ class Catalog extends Component {
         super();
         this.state = {
           searchQuery: "",
-          topicQuery: ""
+          topicQuery: "",
+          searched: false
     }
   }
 
@@ -24,7 +26,9 @@ class Catalog extends Component {
       // When the search form submits, perform an api search with user input
       handleFormSubmit = (event) => {
         event.preventDefault();
-        console.log(this.state.searchQuery, this.state.topicQuery)
+        this.setState({ searched: true });
+        // console.log(this.state.searchQuery, this.state.topicQuery)
+        console.log(SearchDatabase)
       }
 
 
@@ -46,7 +50,7 @@ class Catalog extends Component {
         handleFormSubmit={this.handleFormSubmit}
         />
 
-        {this.renderResults()}
+        {this.state.searched ? this.renderResults() : ""}
       </div>
       
     );
