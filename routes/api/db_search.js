@@ -1,6 +1,5 @@
 const express = require("express");
 const router = express.Router();
-const fs = require('fs');
 // const dbcon = require("../../server.js");
 // const db = require("../../db/hcc_database")
 
@@ -22,18 +21,8 @@ const id = 5
 
 router.get("/test", (req, res, next) => {
     connection.query("SELECT * FROM item WHERE id = ?", id, (err, result) => {
-            // write to a new file named logfile.txt
-        fs.writeFile('elephants.txt', result, (err) => {  
-            // throws an error
-        if (err) {
-            fs.writeFile('elephantswithbaddies.txt', err, (err) =>{
-                if (err) throw err;
-                console.log("error log saved")
-            })
-        }
-            // success case, the file was saved
-        console.log('File saved!');
-        });
+        if (err) console.log("THIS IS AN ERROR: " + err)
+        console.log(result);
     })
 });
 
