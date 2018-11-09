@@ -20,12 +20,17 @@ connection.connect();
 
 const id = 5
 
-router.get("/", (req, res, next) => {
+router.get("/test", (req, res, next) => {
     connection.query("SELECT * FROM item WHERE id = ?", id, (err, result) => {
             // write to a new file named logfile.txt
         fs.writeFile('elephants.txt', result, (err) => {  
             // throws an error
-        if (err) throw err;
+        if (err) {
+            fs.writeFile('elephantswithbaddies.txt', err, (err) =>{
+                if (err) throw err;
+                console.log("error log saved")
+            })
+        }
             // success case, the file was saved
         console.log('File saved!');
         });
