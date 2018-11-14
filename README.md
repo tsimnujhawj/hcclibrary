@@ -4,7 +4,7 @@ The collections include more than 700 Hmong-related books, 325 Hmong-related the
 Library Personnel: Mark E. Pfeifer, PhD
 
 ## Demo
-You can find the Hmong Cultural Center's Library Catalog deployed [here](#).
+You can find the Hmong Cultural Center's Library Catalog deployed [here](#). (Coming soon...)
 
 ## Installation
 ```shell
