@@ -1,5 +1,4 @@
-# Hmong Cultural Center's Library Catalog
-# IN-DEVELOPMENT
+# Hmong Cultural Center's Library Catalog --- IN-DEVELOPMENT
 The Hmong Cultural Center's Library Catalog is an online catalog that allows users to search the largest collection of Hmong-related theses and dissertations and journal articles of any institution in the United States. The web application also gives HCC the tools to update and maintain the growing collection.
 
 ## About
