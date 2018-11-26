@@ -9,6 +9,10 @@ Library Personnel: Mark E. Pfeifer, PhD
 ## Demo
 You can find the Hmong Cultural Center's Library Catalog deployed [here](#). (Coming soon...)
 
+![Landing page](resources/hcclc_1.png)
+
+![Search page](resources/hcclc_2.png)
+
 ## Installation
 ```shell
 $ git clone git@github.com:tsimnujhawj/hcclibrary.git
