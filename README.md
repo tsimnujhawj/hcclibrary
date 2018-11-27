@@ -24,5 +24,10 @@ yarn install || npm install
 - MySQL
 - React
 
+## Development Notes
+I have some major considerations before proceeding further with the project:
+- dump the data into a noSQL (MongoDB)
+- build the API design with the GraphQL architect as opposed to REST
+
 ## About Me
 My name is Tsimnuj Hawj. I am a full-stack web developer with education from the University of Minnesota's Coding Bootcamp. I am also a current staff at the Hmong Cultural Center. This is a project initiated by myself to build a web database of the collection we have to better manage and oversee the extensive archive that the center has accrued over the years.
