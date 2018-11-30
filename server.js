@@ -9,7 +9,7 @@ const connection = mysql.createConnection({
   host: "localhost",
   user: "root",
   password: "root",
-  database: "hcclibrary"
+  database: "hcclc_db"
 });
 
 // mysql connection
@@ -23,7 +23,7 @@ app.use(bodyParser.json());
 
 // enables cors
 app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origi", "*");
+  res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
@@ -33,7 +33,7 @@ app.use(function(req, res, next) {
 const dbsearch = require("./routes/api/db_search");
 
 // activate routes
-app.use("/findall", dbsearch);
+app.use("/search", dbsearch);
 
 // Server static assets if in production
 if (process.env.NODE_ENV === "production") {

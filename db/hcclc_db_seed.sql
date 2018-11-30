@@ -1,11 +1,3 @@
-DROP TABLE IF EXISTS hcclc_db;
-CREATE TABLE hcclc_db (
-item_topic VARCHAR(100) NULL,
-item_title VARCHAR(100) NULL,
-item_author VARCHAR(100) NULL,
-item_quantity INT(10) NULL,
-item_check VARCHAR(10) NULL
-);
 INSERT INTO hcclc_db (item_topic,item_title,item_author,item_quantity,item_check) VALUES 
 ( null,'The Ballad of Mulan',null,1,'In' ),
 ( null,'The Best Place to Live : A Personal Story of the Hmong Refugees from Laos',null,12,'In' ),
@@ -3750,5 +3742,4 @@ INSERT INTO hcclc_db (item_topic,item_title,item_author,item_quantity,item_check
 ( 'VS-Baggy Pants','Baggy ants',null,12,'In' ),
 ( 'War in Laos','The Vietnam War and Its Impacts on the Hmong','Pao Vue',1,'In' ),
 ( 'Yao The Orphan','Yao The Orphan (Level 2)','Charles Johnson',12,'In' ),
-( 'Z - Hmong GLBT','A Phenomenological Study of the Coming Out Experiences of Gay and Lesbian Hmong','Yang, Pahoua K.',12,'In' ),
-( '***   3744 Total Items printed   ***',null,null,null,null )
+( 'Z - Hmong GLBT','A Phenomenological Study of the Coming Out Experiences of Gay and Lesbian Hmong','Yang, Pahoua K.',12,'In' )
