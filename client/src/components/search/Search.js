@@ -9,6 +9,7 @@ class Search extends Component {
           <CategorySelect
             id={el.id}
             category={el.category}
+            keyword={el.keyword}
           />
         ));
       }
@@ -34,7 +35,7 @@ class Search extends Component {
                 <div className="form-group">
                     <label htmlFor="queryTopic">Topic</label>
                     <select className="form-control" id="queryTopic" onChange={this.props.handleTopicQuery}>
-                    <option value="">Select A Topic</option>
+                    <option value="" name="select-a-topic">Select A Topic</option>
                     {this.renderCategory()}
                     </select>
                 </div>
