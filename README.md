@@ -13,6 +13,14 @@ You can find the Hmong Cultural Center's Library Catalog deployed [here](#). (Co
 
 ![Search page](resources/hcclc_2.png)
 
+![HCC Library](resources/hcclc_3.heic)
+
+![HCC Library](resources/hcclc_4.heic)
+
+![HCC Library](resources/hcclc_5.heic)
+
+![HCC Library](resources/hcclc_6.heic)
+
 ## Installation
 ```shell
 $ git clone git@github.com:tsimnujhawj/hcclibrary.git
