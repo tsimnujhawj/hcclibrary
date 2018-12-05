@@ -13,13 +13,13 @@ You can find the Hmong Cultural Center's Library Catalog deployed [here](#). (Co
 
 ![Search page](resources/hcclc_2.png)
 
-![HCC Library](resources/hcclc_3.heic)
+![HCC Library](resources/hcclc_3.jpg)
 
-![HCC Library](resources/hcclc_4.heic)
+![HCC Library](resources/hcclc_4.jpg)
 
-![HCC Library](resources/hcclc_5.heic)
+![HCC Library](resources/hcclc_5.jpg)
 
-![HCC Library](resources/hcclc_6.heic)
+![HCC Library](resources/hcclc_6.jpg)
 
 ## Installation
 ```shell
