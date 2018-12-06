@@ -14,6 +14,9 @@ class Catalog extends Component {
           topicId: "",
           searched: false
     }
+    this.handleSearchQuery = this.handleSearchQuery.bind(this);
+    this.handleTopicQuery = this.handleTopicQuery.bind(this);
+    this.handleFormSubmit = this.handleFormSubmit.bind(this);
   }
 
     handleSearchQuery = (event) => {
@@ -25,11 +28,11 @@ class Catalog extends Component {
     handleTopicQuery = (event) => {
       this.setState({
         topicId: event.target.value,
-        topicQuery: event.target.name
+        topicQuery: Category[event.target.value].category
       });
-      const idPosition = this.state.topicId;
-      const categoryName = this.state.topicQuery
-      console.log(this.state.topicId, Category[idPosition], categoryName)
+      let idPosition = this.state.topicId;
+      let categoryName = this.state.topicQuery
+      console.log("Category:", categoryName, idPosition, "\n", Category[event.target.value]);
     }
     
       // When the search form submits, perform an api search with user input
@@ -37,7 +40,9 @@ class Catalog extends Component {
         event.preventDefault();
         this.setState({ searched: true });
         // console.log(this.state.searchQuery, this.state.topicQuery)
-        console.log(SearchDatabase)
+        console.log("Performing...", SearchDatabase)
+        // TODO: call SearchDatabase function from dbsearch.js
+        // SearchDatabase.SearchDatabase(this.state.searched);
       }
 
 

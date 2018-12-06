@@ -2,8 +2,8 @@ import React from "react";
 // import DB from "../db/hcc_database.csv";
 
 const SearchDatabase = {
-    searchData: () => {
-        console.log("HEY DATABASE")
+    searchData: (props) => {
+        return console.log("HEY DATABASE the state is:", this.props.searched)
     }
 }
 
