@@ -14,14 +14,19 @@ const connection = mysql.createConnection({
 });
 
 // mysql connection
-connection.connect();
+connection.connect((err)=> {
+    if(err) {
+        throw err;
+    }
+    console.log("MySQL connected...");
+});
 
 router.get("/", (req, res, next) => {
     connection.query("SELECT * FROM hcclc_db", (err, result) => {
         if (err) console.log("THIS IS THE ERROR: " + err)
         // res.json(result);
         console.log(result);
-        res.send(result);
+        res.send(JSON.stringify(result));
     })
 });
 
