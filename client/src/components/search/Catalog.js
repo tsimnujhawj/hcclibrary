@@ -12,11 +12,23 @@ class Catalog extends Component {
           searchQuery: "",
           topicQuery: "",
           topicId: "",
+          item: "",
           searched: false
     }
     this.handleSearchQuery = this.handleSearchQuery.bind(this);
     this.handleTopicQuery = this.handleTopicQuery.bind(this);
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
+  }
+
+  componentDidMount() {
+    fetch("https://localhost:3000/search")
+    .then(res => res.json())
+    .then(json => {
+      this.setState({
+        isLoaded: true,
+        item: json,
+      })
+    })
   }
 
     handleSearchQuery = (event) => {
@@ -52,6 +64,7 @@ class Catalog extends Component {
           searchQuery={this.state.searchQuery}
           topicQuery={this.state.topicQuery}
           topicId={this.state.topicId}
+          item={this.state.item}
         />
       )
     }

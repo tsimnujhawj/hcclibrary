@@ -26,7 +26,7 @@ router.get("/", (req, res, next) => {
         if (err) console.log("THIS IS THE ERROR: " + err)
         // res.json(result);
         console.log(result);
-        res.send(JSON.stringify(result));
+        res.send(result);
     })
 });
 
