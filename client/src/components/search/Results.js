@@ -34,17 +34,6 @@ class Results extends Component {
     })
   }
 
-  // componentWillUnmount() {
-  //   this.setState({
-  //     isLoaded: false,
-  //     searchParamter: "",
-  //     items: []
-  //   })
-  // }
-
-
-  // TODO: migrate post request from Catalog.js to Results.js component
-  // TODO: display all specific requests
 
   render () {
     var { isLoaded, items } = this.state;
@@ -63,15 +52,16 @@ class Results extends Component {
     return (
       <div>
           <div className="container result-container">
+          <small>Results found: {items.length}</small>
           {items.map(item => (
           <div className="list-group result-item">
-          <a href="#" className="list-group-item list-group-item-action flex-column align-items-start active">
+          <a className="list-group-item list-group-item-action flex-column align-items-start active result-item">
             <div className="d-flex w-100 justify-content-between">
               <h5 className="mb-1" key={item.id}>{item.item_title}</h5>
               <small className="reference">Ref#: {item.id}</small>
             </div>
             <p className="mb-1 author-name">{item.item_author}</p>
-            <p className="mb-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu dapibus ex.{this.props.searchQuery}</p>
+            <p className="mb-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu dapibus ex.</p>
           </a>
             </div>
             ))}
