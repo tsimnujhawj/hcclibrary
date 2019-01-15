@@ -55,6 +55,16 @@ class Catalog extends Component {
         console.log("Performing...", SearchDatabase)
         // TODO: call SearchDatabase function from dbsearch.js
         // SearchDatabase.SearchDatabase(this.state.searched);
+        fetch("/search/q", {
+          method: "POST",
+          headers: {
+            "Accept": "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            firstParam: "vietnam"
+          })
+        })
       }
 
 

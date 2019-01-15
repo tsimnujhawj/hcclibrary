@@ -77,6 +77,9 @@
 
 .author-name {
   font-style: italic;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-decoration: underline;
 }
 
 .loading-icon {
@@ -88,4 +91,8 @@
 
 .btn {
   border-radius: 0px;
+}
+
+.reference {
+  padding: 2px;
 }

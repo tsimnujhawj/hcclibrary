@@ -21,7 +21,10 @@ class Results extends Component {
         })
       })
   }
-  
+
+  // TODO: migrate post request from Catalog.js to Results.js component
+  // TODO: display all specific requests
+
   render () {
     var { isLoaded, items } = this.state;
     if (!isLoaded) {
@@ -38,7 +41,7 @@ class Results extends Component {
           <a href="#" className="list-group-item list-group-item-action flex-column align-items-start active">
             <div className="d-flex w-100 justify-content-between">
               <h5 className="mb-1" key={item.id}>{item.item_title}</h5>
-              <small>3 days ago</small>
+              <small className="reference">Ref#: {item.id}</small>
             </div>
             <p className="mb-1 author-name">{item.item_author}</p>
             <p className="mb-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu dapibus ex.</p>

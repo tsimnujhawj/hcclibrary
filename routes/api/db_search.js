@@ -24,20 +24,15 @@ connection.connect((err)=> {
 router.get("/", (req, res, next) => {
     connection.query("SELECT * FROM hcclc_db", (err, result) => {
         if (err) console.log("THIS IS THE ERROR: " + err)
-        // res.json(result);
-        // console.log(result);
         res.send(result);
-        // return res.json({
-        //     dataToBeRead: result
-        // })
     })
 });
 
-router.get("/q", (req, res, next) => {
-    let searchParam = req.body.searchParam
-    connection.query(`SELECT * FROM hcclc_db WHERE item_title LIKE ${searchParam}%`, (err, result) => {
+router.post("/q", (req, res, next) => {
+    let searchParam = req.body.firstParam
+    console.log("THIS IS THE PARAM:", searchParam)
+    connection.query("SELECT * FROM hcclc_db WHERE item_title LIKE '%mulan%'", (err, result) => {
         if (err) console.log("THIS IS THE ERROR: " + err)
-        // res.json(result);
         console.log(result);
         res.send(result);
     })
