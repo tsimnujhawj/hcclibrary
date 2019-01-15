@@ -20,17 +20,6 @@ class Catalog extends Component {
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
   }
 
-  componentDidMount() {
-    fetch("https://localhost:3000/search")
-    .then(res => res.json())
-    .then(json => {
-      this.setState({
-        isLoaded: true,
-        item: json,
-      })
-    })
-  }
-
     handleSearchQuery = (event) => {
       this.setState({ searchQuery: event.target.value });
       console.log(this.state.searchQuery)
@@ -55,16 +44,16 @@ class Catalog extends Component {
         console.log("Performing...", SearchDatabase)
         // TODO: call SearchDatabase function from dbsearch.js
         // SearchDatabase.SearchDatabase(this.state.searched);
-        fetch("/search/q", {
-          method: "POST",
-          headers: {
-            "Accept": "application/json",
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            firstParam: "vietnam"
-          })
-        })
+        // fetch("/search/q", {
+        //   method: "POST",
+        //   headers: {
+        //     "Accept": "application/json",
+        //     "Content-Type": "application/json",
+        //   },
+        //   body: JSON.stringify({
+        //     firstParam: "vietnam"
+        //   })
+        // })
       }
 
 

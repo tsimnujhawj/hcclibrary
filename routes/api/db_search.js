@@ -22,7 +22,8 @@ connection.connect((err)=> {
 });
 
 router.get("/", (req, res, next) => {
-    connection.query("SELECT * FROM hcclc_db", (err, result) => {
+    console.log("REQ.BODY:", req.body.firstParam)
+    connection.query("SELECT * FROM hcclc_db WHERE item_title LIKE '%mulan%'", (err, result) => {
         if (err) console.log("THIS IS THE ERROR: " + err)
         res.send(result);
     })
