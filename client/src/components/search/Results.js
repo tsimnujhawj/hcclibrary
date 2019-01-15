@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import LoadingIcon from "../../../src/images/loading_icon.gif";
+import NoResults from "../../../src/images/no_results.gif";
 
 
 class Results extends Component {
@@ -50,6 +51,13 @@ class Results extends Component {
     if (!isLoaded) {
       return (
         <img className="loading-icon" src={LoadingIcon}/>
+      )
+    } else if (items <= 0) {
+      return (
+        <div>
+          <h2 className="no-results">No Results</h2>
+          {/* <img className="loading-icon" src={NoResults}/> */}
+        </div>
       )
     } else {
     return (

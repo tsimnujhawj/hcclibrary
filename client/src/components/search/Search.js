@@ -19,7 +19,7 @@ class Search extends Component {
         <div>
             <div>
                 <div className="hero-content">
-                    <h1 id="hero-title">Hmong Cultural Center's Library Catalog - Search</h1>
+                    <h1 id="hero-title">Search</h1>
                 </div>
 
             <form className="form-container">
