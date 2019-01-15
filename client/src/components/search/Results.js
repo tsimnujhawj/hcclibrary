@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import LoadingIcon from "../../../src/images/loading_icon.gif";
 
 
 class Results extends Component {
@@ -25,7 +26,7 @@ class Results extends Component {
     var { isLoaded, items } = this.state;
     if (!isLoaded) {
       return (
-        <img className="loading-icon" src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif"/>
+        <img className="loading-icon" src={LoadingIcon}/>
       )
     } else {
     return (

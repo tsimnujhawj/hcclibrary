@@ -85,3 +85,7 @@
   margin-right: auto;
   width: 50%;
 }
+
+.btn {
+  border-radius: 0px;
+}
