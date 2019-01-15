@@ -11,27 +11,19 @@ class Results extends Component {
     }
   }
 
-  componentDidMount() {
-    fetch("/search/q", {
-      method: "POST",
-      headers: {
-        "Accept": "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        firstParam: "mulan"
-      })
-    },
-    fetch("/search")
-      .then(res => res.json())
-      .then(json => {
-        this.setState({
-          isLoaded: true,
-          items: json,
-        })
-      })
-    )
-  }
+  // componentDidMount() {
+  //   fetch("/search/q", {
+  //     method: "POST",
+  //     headers: {
+  //       "Accept": "application/json",
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify({
+  //       firstParam: "mulan"
+  //     })
+  //   })
+  // }
+
 
   // TODO: migrate post request from Catalog.js to Results.js component
   // TODO: display all specific requests

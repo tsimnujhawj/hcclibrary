@@ -21,9 +21,8 @@ connection.connect((err)=> {
     console.log("MySQL connected...");
 });
 
-router.get("/", (req, res, next) => {
-    console.log("REQ.BODY:", req.body.firstParam)
-    connection.query("SELECT * FROM hcclc_db WHERE item_title LIKE '%mulan%'", (err, result) => {
+router.get("/q", (req, res, next) => {
+    connection.query("SELECT * FROM hcclc_db WHERE item_title LIKE '%" + searchParam + "%'", (err, result) => {
         if (err) console.log("THIS IS THE ERROR: " + err)
         res.send(result);
     })
@@ -31,10 +30,8 @@ router.get("/", (req, res, next) => {
 
 router.post("/q", (req, res, next) => {
     let searchParam = req.body.firstParam
-    console.log("THIS IS THE PARAM:", searchParam)
-    connection.query("SELECT * FROM hcclc_db WHERE item_title LIKE '%mulan%'", (err, result) => {
+    connection.query("SELECT * FROM hcclc_db WHERE item_title LIKE '%" + searchParam + "%'", (err, result) => {
         if (err) console.log("THIS IS THE ERROR: " + err)
-        console.log(result);
         res.send(result);
     })
 });

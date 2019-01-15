@@ -14,6 +14,20 @@ class Search extends Component {
         ));
       }
 
+      formSub = (event) => {
+        event.preventDefault();
+        fetch("/search/q", {
+          method: "POST",
+          headers: {
+            "Accept": "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            firstParam: "mulan"
+          })
+        })
+      }
+
         render() {
         return (
         <div>

@@ -13,7 +13,6 @@ class Catalog extends Component {
           topicQuery: "",
           topicId: "",
           item: "",
-          searched: false
     }
     this.handleSearchQuery = this.handleSearchQuery.bind(this);
     this.handleTopicQuery = this.handleTopicQuery.bind(this);
@@ -40,20 +39,18 @@ class Catalog extends Component {
       handleFormSubmit = (event) => {
         event.preventDefault();
         this.setState({ searched: true });
-        // console.log(this.state.searchQuery, this.state.topicQuery)
-        console.log("Performing...", SearchDatabase)
-        // TODO: call SearchDatabase function from dbsearch.js
-        // SearchDatabase.SearchDatabase(this.state.searched);
-        // fetch("/search/q", {
-        //   method: "POST",
-        //   headers: {
-        //     "Accept": "application/json",
-        //     "Content-Type": "application/json",
-        //   },
-        //   body: JSON.stringify({
-        //     firstParam: "vietnam"
-        //   })
-        // })
+          fetch("/search/q", {
+              method: "POST",
+              headers: {
+                "Accept": "application/json",
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                firstParam: "mulan"
+              })
+            })
+            .then(res => res.json())
+            .then(response => console.log(response))
       }
 
 
