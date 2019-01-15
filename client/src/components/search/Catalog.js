@@ -54,12 +54,14 @@ class Catalog extends Component {
 
     renderResults = () => {
       return(
+        <div>
         <Results
           searchQuery={this.state.searchQuery}
           topicQuery={this.state.topicQuery}
           topicId={this.state.topicId}
           item={this.state.item}
         />
+        </div>
       )
     }
     

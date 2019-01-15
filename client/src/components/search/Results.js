@@ -29,7 +29,6 @@ class Results extends Component {
       this.setState({
         items: response,
         isLoaded: true,
-        searchParamter: ""
       })
     })
   }
@@ -55,7 +54,6 @@ class Results extends Component {
     } else {
     return (
       <div>
-        
           <div className="container result-container">
           {items.map(item => (
           <div className="list-group result-item">
