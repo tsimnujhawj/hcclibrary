@@ -14,20 +14,6 @@ class Search extends Component {
         ));
       }
 
-      formSub = (event) => {
-        event.preventDefault();
-        fetch("/search/q", {
-          method: "POST",
-          headers: {
-            "Accept": "application/json",
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            firstParam: "mulan"
-          })
-        })
-      }
-
         render() {
         return (
         <div>
@@ -56,6 +42,7 @@ class Search extends Component {
                 </div>
             </div>
             <button type="submit" className="btn btn-info" onClick={this.props.handleFormSubmit}>Submit</button>
+            <button type="submit" className="btn clear-btn btn-danger" onClick={this.props.clearResults}>Reset</button>
             </div>
             </form>
 

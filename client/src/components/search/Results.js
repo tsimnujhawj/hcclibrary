@@ -8,19 +8,37 @@ class Results extends Component {
     this.state = {
       items: [],
       isLoaded: false,
+      stuff: "education",
+      searchParamter: this.props.searchQuery
     }
   }
 
-  // componentDidMount() {
-  //   fetch("/search/q", {
-  //     method: "POST",
-  //     headers: {
-  //       "Accept": "application/json",
-  //       "Content-Type": "application/json",
-  //     },
-  //     body: JSON.stringify({
-  //       firstParam: "mulan"
-  //     })
+  componentDidMount() {
+    fetch("/search/q", {
+      method: "POST",
+      headers: {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        firstParam: this.state.searchParamter
+      })
+    })
+    .then(res => res.json())
+    .then(response => {
+      this.setState({
+        items: response,
+        isLoaded: true,
+        searchParamter: ""
+      })
+    })
+  }
+
+  // componentWillUnmount() {
+  //   this.setState({
+  //     isLoaded: false,
+  //     searchParamter: "",
+  //     items: []
   //   })
   // }
 
@@ -47,7 +65,7 @@ class Results extends Component {
               <small className="reference">Ref#: {item.id}</small>
             </div>
             <p className="mb-1 author-name">{item.item_author}</p>
-            <p className="mb-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu dapibus ex.</p>
+            <p className="mb-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu dapibus ex.{this.props.searchQuery}</p>
           </a>
             </div>
             ))}

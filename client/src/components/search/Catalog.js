@@ -6,8 +6,8 @@ import Results from "./Results"
 
 class Catalog extends Component {
 
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state = {
           searchQuery: "",
           topicQuery: "",
@@ -17,11 +17,11 @@ class Catalog extends Component {
     this.handleSearchQuery = this.handleSearchQuery.bind(this);
     this.handleTopicQuery = this.handleTopicQuery.bind(this);
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
+    this.clearResults = this.clearResults.bind(this);
   }
 
     handleSearchQuery = (event) => {
       this.setState({ searchQuery: event.target.value });
-      console.log(this.state.searchQuery)
       // do i make the api call here?
     }
     
@@ -39,18 +39,16 @@ class Catalog extends Component {
       handleFormSubmit = (event) => {
         event.preventDefault();
         this.setState({ searched: true });
-          fetch("/search/q", {
-              method: "POST",
-              headers: {
-                "Accept": "application/json",
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify({
-                firstParam: "mulan"
-              })
-            })
-            .then(res => res.json())
-            .then(response => console.log(response))
+      }
+
+      clearResults = (event) => {
+        event.preventDefault();
+        this.setState({
+          searchQuery: "",
+          topicQuery: "",
+          topicId: "",
+          item: "",
+        });
       }
 
 
