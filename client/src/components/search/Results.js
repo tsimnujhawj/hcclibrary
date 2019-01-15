@@ -11,7 +11,7 @@ class Results extends Component {
   }
 
   componentDidMount() {
-    fetch("https://jsonplaceholder.typicode.com/users")
+    fetch("/search")
       .then(res => res.json())
       .then(json => {
         this.setState({
@@ -24,6 +24,8 @@ class Results extends Component {
   render () {
     var { isLoaded, items } = this.state;
     return (
+      <div>
+        {items.map(item => (
   <div className="container result-container">
   <div className="list-group result-item">
   <a href="#" className="list-group-item list-group-item-action flex-column align-items-start active">
@@ -32,13 +34,11 @@ class Results extends Component {
       <small>3 days ago</small>
     </div>
     {/* <div>{props.topicQuery} | {props.topicId}</div> */}
-    <p className="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-    <small>Donec id elit non mi porta.</small>
-            {items.map(item => (
-              <li key={item.id}>{item.name} | {item.email}</li>
-            ))}
+    <p className="mb-1" key={item.id}>{item.item_title}</p>
   </a>
     </div>
+  </div>
+  ))}
   </div>
     )
   }

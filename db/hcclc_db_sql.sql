@@ -1,10 +1,12 @@
 DROP TABLE IF EXISTS hcclc_db;
 CREATE TABLE hcclc_db (
+id INT(15) NOT NULL AUTO_INCREMENT,
 item_topic VARCHAR(100) NULL,
 item_title VARCHAR(100) NULL,
 item_author VARCHAR(100) NULL,
 item_quantity INT(10) NULL,
-item_check VARCHAR(10) NULL
+item_check VARCHAR(10) NULL,
+PRIMARY KEY (ID)
 );
 INSERT INTO hcclc_db (item_topic,item_title,item_author,item_quantity,item_check) VALUES 
 ( null,'The Ballad of Mulan',null,1,'In' ),
