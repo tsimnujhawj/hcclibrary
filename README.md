@@ -31,11 +31,13 @@ yarn install || npm install
 - Express
 - MySQL
 - React
+- Node
+- Bootstrap (Litera)
 
 ## Development Notes
-I have some major considerations before proceeding further with the project:
-- dump the data into a noSQL (MongoDB)
-- build the API design with the GraphQL architect as opposed to REST
+- Search query related to title is functional, however I would like to integrate the topics JSON into the search query. The aim is that topic keywords are considered in the search parameter.
 
 ## About Me
 My name is Tsimnuj Hawj. I am a full-stack web developer with education from the University of Minnesota's Coding Bootcamp. I am also a current staff at the Hmong Cultural Center. This is a project initiated by myself to build a web database of the collection we have to better manage and oversee the extensive archive that the center has accrued over the years.
+
+Email: tsimnuj.hawj@gmail.com
