@@ -19,10 +19,10 @@ class App extends Component {
     return (
       
         <div>
-          <div className="footer-container">
+          <div className="Site">
         <Router>
           
-          <div>
+          <div className="Site-content">
           <Navbar/>
             <Route exact path="/" component={Landing}/>
             <Route exact path="/search" component={Catalog} />
