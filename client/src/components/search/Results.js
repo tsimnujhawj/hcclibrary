@@ -58,10 +58,10 @@ class Results extends Component {
           <a className="list-group-item list-group-item-action flex-column align-items-start active result-item">
             <div className="d-flex w-100 justify-content-between">
               <h5 className="mb-1" key={item.id}>{item.item_title}</h5>
-              <small className="reference">Ref#: {item.id}</small>
+              <small className="reference">Ref#: {item.id} | Copies: {item.item_quantity}</small>
             </div>
             <p className="mb-1 author-name">{item.item_author}</p>
-            <p className="mb-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu dapibus ex.</p>
+            {/* <p className="mb-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu dapibus ex.</p> */}
           </a>
             </div>
             ))}
