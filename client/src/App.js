@@ -24,7 +24,7 @@ class App extends Component {
           
           <div className="Site-content">
           <Navbar/>
-            <Route path="/" component={Landing}/>
+            <Route exact path="/" component={Landing}/>
             <Route path="/search" component={Catalog} />
             <Route path="/about" component={About} />
             <Route path="/contact" component={Contact} />
