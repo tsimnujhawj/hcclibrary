@@ -11,7 +11,7 @@ const connection = mysql.createConnection(
 //   user: "root",
 //   password: "root",
 //   database: "hcclc_db"
-// }
+// } ||
 process.env.JAWSDB_URL
 );
 
