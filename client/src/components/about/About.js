@@ -7,7 +7,7 @@ const About = props => (
            <h1 id="hero-title">About Us</h1>
         </div>
         <br/>
-        <div className="container">
+        <div className="container form-container">
         <img className="image-center" src={HccEmblem}/>
         <br/>
         <p>Hmong Cultural Center is the primary Hmong and Asian American organization in the Minneapolis-St. Paul area that provides community outreach activities related to multicultural education for the purposes of promoting positive race relations in the Twin Cities community.</p>

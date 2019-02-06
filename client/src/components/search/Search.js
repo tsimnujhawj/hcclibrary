@@ -21,7 +21,11 @@ class Search extends Component {
                 <div className="hero-content">
                     <h1 id="hero-title">Search</h1>
                 </div>
-
+                <br/>
+            <div className="container search-intro">
+                <p>We don't really know where this goes - and I'm not sure we really care. Now let's put some happy little clouds in here. Poor old tree. It just happens - whether or not you worried about it or tried to plan it. You better get your coat out, this is going to be a cold painting. Son of a gun.</p>
+                <p>But they're very easily killed. Clouds are delicate. Just make little strokes like that. Every single thing in the world has its own personality - and it is up to you to make friends with the little rascals. We don't want to set these clouds on fire. You gotta think like a tree. Clouds are free. They just float around the sky all day and have fun.</p>
+            </div>
             <form className="form-container">
             <div className="container">
             <div className="row">
