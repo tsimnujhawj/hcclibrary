@@ -10,8 +10,9 @@ const sectionStyle = {
 
 const HomeLanding = () => {
         return (
-            <div style={sectionStyle} className="landing-image">
+        <div style={sectionStyle} className="landing-image">
 
+          <div>
             <div className="news-container">
             <div className="container search-intro">
             <h2 className="text-center">Introduction</h2>
@@ -35,8 +36,11 @@ const HomeLanding = () => {
             </h6>
             </div>
             </div>
+            
+          </div>
+          
 
-            </div>
+        </div>
         )
 }
 
