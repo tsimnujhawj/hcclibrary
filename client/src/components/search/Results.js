@@ -15,7 +15,7 @@ class Results extends Component {
   }
 
   componentDidMount() {
-    fetch("/", {
+    fetch("/search", {
       method: "POST",
       headers: {
         "Accept": "application/json",
