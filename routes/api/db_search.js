@@ -5,12 +5,12 @@ const mysql = require("mysql");
 
 // setup mysql server
 const connection = mysql.createConnection(
-      {
-      host: "localhost",
-      user: "root",
-      password: "root",
-      database: "hcclc_db"
-    } ||
+    //   {
+    //   host: "localhost",
+    //   user: "root",
+    //   password: "root",
+    //   database: "hcclc_db"
+    // } ||
     process.env.JAWSDB_URL
     );
 
