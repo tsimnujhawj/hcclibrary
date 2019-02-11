@@ -10,7 +10,8 @@ class Results extends Component {
       items: [],
       isLoaded: false,
       stuff: "education",
-      searchParamter: this.props.searchQuery
+      searchParamter: this.props.searchQuery,
+      searchTopic: this.props.topicQuery
     }
   }
 
@@ -22,7 +23,8 @@ class Results extends Component {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        firstParam: this.state.searchParamter
+        firstParam: this.state.searchParamter,
+        topicParam: this.state.searchTopic
       })
     })
     .then(res => res.json())
@@ -58,7 +60,7 @@ class Results extends Component {
           <a className="list-group-item list-group-item-action flex-column align-items-start active result-item">
             <div className="d-flex w-100 justify-content-between">
               <h5 className="mb-1" key={item.id}>{item.item_title}</h5>
-              <small className="reference">Ref#: {item.id} | Copies: {item.item_quantity}</small>
+              <small className="reference">{item.item_topic} | Ref#: {item.id} | Copies: {item.item_quantity}</small>
             </div>
             <p className="mb-1 author-name">{item.item_author}</p>
             {/* <p className="mb-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu dapibus ex.</p> */}
