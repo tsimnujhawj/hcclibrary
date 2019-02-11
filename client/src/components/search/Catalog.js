@@ -30,9 +30,6 @@ class Catalog extends Component {
         topicId: event.target.value,
         topicQuery: Category[event.target.value].category
       });
-      let idPosition = this.state.topicId;
-      let categoryName = this.state.topicQuery
-      console.log("Category:", categoryName, idPosition, "\n", Category[event.target.value]);
     }
     
       // When the search form submits, perform an api search with user input

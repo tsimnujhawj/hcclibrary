@@ -2,7 +2,6 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const path = require("path");
 const mysql = require("mysql");
-// const router = express.Router();
 
 // setup mysql server
 const connection = mysql.createConnection(
