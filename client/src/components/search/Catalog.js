@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Category from "../../utils/api/category"
-import SearchDatabase from "../../utils/api/dbsearch"
 import Search from "./Search"
 import Results from "./Results"
 
@@ -12,7 +11,8 @@ class Catalog extends Component {
           searchQuery: "",
           topicQuery: "",
           topicId: "",
-          item: "",
+          isLoaded: false,
+          items: []
     }
     this.handleSearchQuery = this.handleSearchQuery.bind(this);
     this.handleTopicQuery = this.handleTopicQuery.bind(this);
@@ -22,7 +22,6 @@ class Catalog extends Component {
 
     handleSearchQuery = (event) => {
       this.setState({ searchQuery: event.target.value });
-      // do i make the api call here?
     }
     
     handleTopicQuery = (event) => {
@@ -35,16 +34,38 @@ class Catalog extends Component {
       // When the search form submits, perform an api search with user input
       handleFormSubmit = (event) => {
         event.preventDefault();
-        this.setState({ searched: true });
+        const data = this.state;
+        // do i make the api call here?
+            fetch("/search", {
+              method: "POST",
+              headers: {
+                "Accept": "application/json",
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                firstParam: data.searchQuery,
+                topicParam: data.topicQuery
+              })
+            })
+            .then(res => res.json())
+            .then(response => {
+              this.setState({
+                items: response,
+                isLoaded: true,
+                searched: true
+              },
+              () => console.log(this.state))
+            })
       }
 
       clearResults = (event) => {
-        event.preventDefault();
+        // event.preventDefault();
         this.setState({
           searchQuery: "",
           topicQuery: "",
           topicId: "",
-          item: "",
+          isLoaded: false,
+          items: []
         });
       }
 
@@ -56,7 +77,8 @@ class Catalog extends Component {
           searchQuery={this.state.searchQuery}
           topicQuery={this.state.topicQuery}
           topicId={this.state.topicId}
-          item={this.state.item}
+          items={this.state.items}
+          isLoaded={this.state.isLoaded}
         />
         </div>
       )

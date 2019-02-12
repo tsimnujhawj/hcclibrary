@@ -7,38 +7,40 @@ class Results extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      items: [],
-      isLoaded: false,
-      stuff: "education",
-      searchParamter: this.props.searchQuery,
-      searchTopic: this.props.topicQuery
+      items: this.props.items,
+      isLoaded: this.props.isLoaded,
     }
   }
 
-  componentDidMount() {
-    fetch("/search", {
-      method: "POST",
-      headers: {
-        "Accept": "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        firstParam: this.state.searchParamter,
-        topicParam: this.state.searchTopic
-      })
-    })
-    .then(res => res.json())
-    .then(response => {
-      this.setState({
-        items: response,
-        isLoaded: true,
-      })
-    })
+  componentDidMount(){
+    console.log("testing")
   }
+
+  // componentDidMount() {
+  //   fetch("/search", {
+  //     method: "POST",
+  //     headers: {
+  //       "Accept": "application/json",
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify({
+  //       firstParam: this.state.searchParamter,
+  //       topicParam: this.state.searchTopic
+  //     })
+  //   })
+  //   .then(res => res.json())
+  //   .then(response => {
+  //     this.setState({
+  //       items: response,
+  //       isLoaded: true,
+  //     })
+  //   })
+  // }
 
 
   render () {
     var { isLoaded, items } = this.state;
+    console.log(isLoaded, items)
     if (!isLoaded) {
       return (
         <img className="loading-icon" src={LoadingIcon}/>
