@@ -12,10 +12,6 @@ class Results extends Component {
     }
   }
 
-  componentDidMount(){
-    console.log("testing")
-  }
-
   // componentDidMount() {
   //   fetch("/search", {
   //     method: "POST",
@@ -36,7 +32,6 @@ class Results extends Component {
   //     })
   //   })
   // }
-
 
   render () {
     var { isLoaded, items } = this.state;
