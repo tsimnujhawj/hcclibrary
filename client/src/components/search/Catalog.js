@@ -34,7 +34,7 @@ class Catalog extends Component {
       // When the search form submits, perform an api search with user input
       handleFormSubmit = (event) => {
         event.preventDefault();
-        if (this.state.searchQuery === "") {
+        if (this.state.searchQuery === "" && this.state.topicQuery === "") {
           return console.log("Search cannot be empty.")
         }
         // reset searched and clears form/results upon submit
