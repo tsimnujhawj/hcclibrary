@@ -12,30 +12,8 @@ class Results extends Component {
     }
   }
 
-  // componentDidMount() {
-  //   fetch("/search", {
-  //     method: "POST",
-  //     headers: {
-  //       "Accept": "application/json",
-  //       "Content-Type": "application/json",
-  //     },
-  //     body: JSON.stringify({
-  //       firstParam: this.state.searchParamter,
-  //       topicParam: this.state.searchTopic
-  //     })
-  //   })
-  //   .then(res => res.json())
-  //   .then(response => {
-  //     this.setState({
-  //       items: response,
-  //       isLoaded: true,
-  //     })
-  //   })
-  // }
-
   render () {
     var { isLoaded, items } = this.state;
-    console.log(isLoaded, items)
     if (!isLoaded) {
       return (
         <img className="loading-icon" src={LoadingIcon}/>

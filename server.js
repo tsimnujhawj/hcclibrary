@@ -5,7 +5,7 @@ const mysql = require("mysql");
 
 // setup mysql server
 const connection = mysql.createConnection(
-  // process.env.JAWSDB_URL ||
+  process.env.JAWSDB_URL ||
   {
   host: "localhost",
   user: "root",

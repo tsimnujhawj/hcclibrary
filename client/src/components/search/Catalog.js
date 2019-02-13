@@ -34,6 +34,8 @@ class Catalog extends Component {
       // When the search form submits, perform an api search with user input
       handleFormSubmit = (event) => {
         event.preventDefault();
+        // reset searched and clears form/results upon submit
+        this.setState({ searched: false });
         const data = this.state;
         // do i make the api call here?
             fetch("/search", {
@@ -53,8 +55,7 @@ class Catalog extends Component {
                 items: response,
                 isLoaded: true,
                 searched: true
-              },
-              () => console.log(this.state))
+              })
             })
       }
 
@@ -92,7 +93,7 @@ class Catalog extends Component {
         handleTopicQuery={this.handleTopicQuery}
         handleFormSubmit={this.handleFormSubmit}
         />
-
+        {/* If api to db is success, render Results component */}
         {this.state.searched ? this.renderResults() : ""}
       </div>
       

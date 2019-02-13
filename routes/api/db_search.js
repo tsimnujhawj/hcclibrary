@@ -5,7 +5,7 @@ const mysql = require("mysql");
 
 // setup mysql server
 const connection = mysql.createConnection(
-    // process.env.JAWSDB_URL ||
+    process.env.JAWSDB_URL ||
       {
       host: "localhost",
       user: "root",
@@ -26,10 +26,8 @@ connection.connect((err)=> {
 router.post("/", (req, res, next) => {
     let searchParam = req.body.firstParam;
     let searchTopic = req.body.topicParam;
-    console.log("backend req body", searchParam, searchTopic)
     connection.query("SELECT * FROM hcclc_db WHERE item_title LIKE '%" + searchParam + "%' && item_topic LIKE '%" + searchTopic + "%'", (err, result) => {
         if (err) console.log("THIS IS THE ERROR: " + err)
-        console.log(result)
         res.send(result);
     })
 });

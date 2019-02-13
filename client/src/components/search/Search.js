@@ -42,8 +42,8 @@ class Search extends Component {
                 </div>
                 </div>
             </div>
-            <button type="submit" className="btn btn-info" onClick={this.props.handleFormSubmit}>Submit</button>
-            <button type="submit" className="btn clear-btn btn-danger" onClick={this.props.clearResults}>Reset</button>
+            <button type="submit" className="btn btn-info" onClick={this.props.handleFormSubmit}>Search</button>
+            {/* <button type="submit" className="btn clear-btn btn-danger" onClick={this.props.clearResults}>Reset</button> */}
             </div>
             </form>
 
